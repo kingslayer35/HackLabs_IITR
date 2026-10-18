@@ -1,0 +1,4 @@
+# Isolated CPU encoder runtime used for semantic_memory_v1.
+onnxruntime==1.23.2
+numpy==2.2.6
+tokenizers==0.22.2

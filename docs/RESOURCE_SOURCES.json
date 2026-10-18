@@ -1,0 +1,116 @@
+[
+  {
+    "url": "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Publications/ICD10CM/2026/icd10cm-table%20and%20index-2026.zip",
+    "date": "2026-10-17",
+    "sha256": "de80c60de23fef47105caffa7e7b3f72d813373c791794748e291b812eebd925",
+    "licence": "US government public domain"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lisavirginia/clinical-abbreviations/c2530a6519ec02246a4f577bf073e4dfe9428518/metainventory/Metainventory_Version1.0.0.csv",
+    "date": "2026-10-17",
+    "sha256": "35ebc2b7e40f43448ce47cb74f6195f32facb04a32bd42aeda33bed8280ba257",
+    "licence": "CC BY 4.0"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lisavirginia/clinical-abbreviations/c2530a6519ec02246a4f577bf073e4dfe9428518/metainventory/README.md",
+    "date": "2026-10-17",
+    "sha256": "f2c65c4e064ce112e5ecd265153b1ab8ad851cb096f808bf2781682ac7e7905d",
+    "licence": "CC BY 4.0"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lisavirginia/clinical-abbreviations/c2530a6519ec02246a4f577bf073e4dfe9428518/LICENSE.txt",
+    "date": "2026-10-17",
+    "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94",
+    "licence": "CC BY 4.0"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/cambridgeltl/sapbert/1a528f66d277d91f99b6463b43ce5309a9279506/src/metric_learning.py",
+    "date": "2026-10-17",
+    "sha256": "ff27d93612a4dd9fd98a641f54292be97c258295b10391ab6c535ab076f66f07",
+    "licence": "MIT (reference code only)"
+  },
+  {
+    "url": "https://huggingface.co/cambridgeltl/SapBERT-from-PubMedBERT-fulltext/resolve/090663c3ae57bf35ffe4d0d468a2a88d03051a4d/README.md",
+    "date": "2026-10-17",
+    "sha256": "377c2a56de9d04fe7c33691e24da24d585c077681a16bce1917a6cc140a99ed1",
+    "licence": "Apache-2.0"
+  },
+  {
+    "url": "https://huggingface.co/cambridgeltl/SapBERT-from-PubMedBERT-fulltext/resolve/090663c3ae57bf35ffe4d0d468a2a88d03051a4d/config.json",
+    "date": "2026-10-17",
+    "sha256": "c0fa35def52bf7d81865d23dba0417fdbb67d416fdde70cae5c7beab476b584e",
+    "licence": "Apache-2.0"
+  },
+  {
+    "url": "https://huggingface.co/cambridgeltl/SapBERT-from-PubMedBERT-fulltext/resolve/090663c3ae57bf35ffe4d0d468a2a88d03051a4d/pytorch_model.bin",
+    "date": "2026-10-17",
+    "sha256": "07f7672c7ac852d8efff83e4a7a63985bf50c03d5b57f6a7909c11fe66532137",
+    "licence": "Apache-2.0"
+  },
+  {
+    "url": "https://huggingface.co/cambridgeltl/SapBERT-from-PubMedBERT-fulltext/resolve/090663c3ae57bf35ffe4d0d468a2a88d03051a4d/special_tokens_map.json",
+    "date": "2026-10-17",
+    "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+    "licence": "Apache-2.0"
+  },
+  {
+    "url": "https://huggingface.co/cambridgeltl/SapBERT-from-PubMedBERT-fulltext/resolve/090663c3ae57bf35ffe4d0d468a2a88d03051a4d/tokenizer_config.json",
+    "date": "2026-10-17",
+    "sha256": "76eb84b4b5b0d1bdba02906d7fae249be541c41d72e2024094aea513f98f2be7",
+    "licence": "Apache-2.0"
+  },
+  {
+    "url": "https://huggingface.co/cambridgeltl/SapBERT-from-PubMedBERT-fulltext/resolve/090663c3ae57bf35ffe4d0d468a2a88d03051a4d/vocab.txt",
+    "date": "2026-10-17",
+    "sha256": "79489a52be45e6fa033521e8ce8e4f62aedc0a742ee2aa6fc04667e5b0b1454d",
+    "licence": "Apache-2.0"
+  },
+  {
+    "url": "https://files.pythonhosted.org/packages/64/a5/588ca7abe3afff6f7374604e36a230819a68f5a6546b0037322f41f1fd54/simple_icd_10_cm-1.5.0-py3-none-any.whl",
+    "date": "2026-10-17",
+    "sha256": "6d461d71dc26aedc530ae65f02cfb578a154e49507c32e8241e75f701d4b7e42",
+    "licence": "MIT"
+  },
+  {
+    "url": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B/resolve/e61197ed45024b0ed8a2d74b80b4d909f1255473/README.md",
+    "date": "2026-10-17",
+    "sha256": "5bba8c734f6dd3ae48317b4139317e45a7fce48fc55e15670b23a0dd15492ab6",
+    "licence": "Apache-2.0"
+  },
+  {
+    "url": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B/resolve/e61197ed45024b0ed8a2d74b80b4d909f1255473/config.json",
+    "date": "2026-10-17",
+    "sha256": "d479c427a9ca5295218063d4f9aca4f297ab4ac27487cca7af42c84643d51ef0",
+    "licence": "Apache-2.0"
+  },
+  {
+    "url": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B/resolve/e61197ed45024b0ed8a2d74b80b4d909f1255473/merges.txt",
+    "date": "2026-10-17",
+    "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "licence": "Apache-2.0"
+  },
+  {
+    "url": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B/resolve/e61197ed45024b0ed8a2d74b80b4d909f1255473/model.safetensors",
+    "date": "2026-10-17",
+    "sha256": "27cd75a405b9c1b46b59abfd88aaa209e6fed2a1972cde9b70e7659537c5e65b",
+    "licence": "Apache-2.0"
+  },
+  {
+    "url": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B/resolve/e61197ed45024b0ed8a2d74b80b4d909f1255473/tokenizer.json",
+    "date": "2026-10-17",
+    "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "licence": "Apache-2.0"
+  },
+  {
+    "url": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B/resolve/e61197ed45024b0ed8a2d74b80b4d909f1255473/tokenizer_config.json",
+    "date": "2026-10-17",
+    "sha256": "253153d0738ceb4c668d2eff957714dd2bea0b56de772a9fdccd96cbf517e6a0",
+    "licence": "Apache-2.0"
+  },
+  {
+    "url": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B/resolve/e61197ed45024b0ed8a2d74b80b4d909f1255473/vocab.json",
+    "date": "2026-10-17",
+    "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "licence": "Apache-2.0"
+  }
+]

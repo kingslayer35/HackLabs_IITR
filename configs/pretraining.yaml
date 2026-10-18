@@ -1,0 +1,149 @@
+seed: 13
+decision:
+  objective: all_types
+paths:
+  external_dir: private_assets/resources
+  data_dir: private_assets/data
+  terminology_dir: private_assets/terminology
+  index_dir: runtime/indexes
+  query_cache_dir: runtime/indexes/reviewed
+  model_dir: runtime/training/pretraining/models
+  run_dir: runtime/training/pretraining/runs
+  log_dir: runtime/logs
+  report_dir: results
+  results_dir: results
+  hf_home: runtime/hf_cache
+  frozen_alias_index_dir: runtime/indexes/reviewed/eval/anchor
+  vllm_python: .venv-vllm/bin/python
+  todo_file: docs/DELIVERABLES.md
+  train_file: hackathon_train.csv
+  icd_file: icd10cm_codes.xlsx
+  snomed_file: SNOMEDCT_US_codes_and_descriptions.xlsx
+  training_dataset_dir: private_assets/datasets
+resources:
+  cdc_directory: https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Publications/ICD10CM/2026/
+  abbreviation_repo: https://api.github.com/repos/lisavirginia/clinical-abbreviations
+  retriever: cambridgeltl/SapBERT-from-PubMedBERT-fulltext
+  reranker: Qwen/Qwen3-Reranker-0.6B
+  cdc_subdir: cdc
+  abbreviation_subdir: abbreviations
+  snomed_sheet: SNOMED codes
+retrieval:
+  channel_k: 100
+  rrf_k: 60
+  fused_k: 50
+  pool_k: 64
+  dense_chunk: 32768
+  encode_batch: 256
+  query_batch: 64
+  enabled_views:
+  - V0
+  - V1
+  - V2
+  - V3
+  - V4
+  cdc_enabled: false
+  bridge_enabled: false
+  enabled_by_system:
+    ICD:
+    - V0
+    - V1
+    - V2
+    SNOMED:
+    - V0
+    - V1
+    - V2
+    - V3
+    - V4
+  family_enabled: false
+  lookalike_enabled: true
+  subtree_enabled: true
+split:
+  train_fraction: 0.7
+  dev_fraction: 0.15
+  test_fraction: 0.15
+  near_duplicate_cosine: 0.9
+  bootstrap_samples: 1000
+probe:
+  codes_per_system: 1500
+preprocessing:
+  revision: row_reviewed_20261018
+  window_chars: 300
+  noise_sample: 5000
+  audit_sample: 100
+training:
+  max_length: 40
+gates:
+  icd_codes: 98182
+  icd_leaves: 74718
+  snomed_concepts: 382124
+  snomed_tagged: 382120
+  c0_tolerance_points: 0.5
+  c0_reference:
+    ICD:
+      acc@1: 22.9
+      R@5: 39.4
+      R@20: 50.5
+      R@50: 57.6
+      R@200: 64.2
+    SNOMED_Dx:
+      acc@1: 40.1
+      R@5: 56.2
+      R@20: 67.1
+      R@50: 73.7
+      R@200: 81.1
+training_v2:
+  index_root: runtime/indexes/pretraining
+  temperature: 0.03
+  learning_rate: 2.0e-05
+  weight_decay: 0.01
+  warmup_fraction: 0.1
+  grad_clip: 1.0
+  batch_size: 64
+  max_epochs: 10
+  eval_every: 50
+  log_every: 10
+  patience: 6
+  min_delta: 0.0001
+  alias_query_ratio: 0.5
+  noise_kinds:
+  - merge
+  - character
+  - truncate
+  - inversion
+  train_audit_rows: 1000
+  drift_names: 2000
+evaluation:
+  base_source: C1
+  adapted_source: C2_v2
+reranker:
+  seen_enabled: false
+  target_instruction: false
+  backend: vllm
+generation: submission_latest
+retriever_generation: sapbert_v2_asymmetric
+preprocessing_generation: reviewed_20261018_v2
+vllm:
+  host: 127.0.0.1
+  port: 18889
+  workers: 4
+  request_batch: 128
+  item_batch: 16
+  max_num_seqs: 256
+  max_num_batched_tokens: 32768
+  gpu_memory_utilization: 0.75
+  model_name: termmap-qwen-base
+  adapter_name: termmap-epoch2
+  enforce_eager: true
+  batch_invariant: true
+  max_model_len: 512
+  vllm_version: 0.19.0
+  dtype: bfloat16
+  head_dtype: model
+  attention_backend: TRITON_ATTN
+  input_cache_enabled: true
+  reference_adapter_dtype: bfloat16
+deployment:
+  profile: eval
+  flow: F11
+  adapter_directory: reranker_lora/best

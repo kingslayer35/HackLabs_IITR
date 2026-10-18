@@ -1,0 +1,205 @@
+{
+  "current_report_source_sha256": "a80d0aa310d0e41e4ca04ec097375ab3fcfd16c08fd81f0f515dfb018064d1c1",
+  "disk_assets": {
+    "Adapted ICD": {
+      "bytes": 438885825,
+      "files": 6,
+      "path": "/home/shivank_g/projects/pratham/entity_group/HackLabs/artifacts/models/sapbert_v2/best_ICD"
+    },
+    "Adapted SNOMED": {
+      "bytes": 438885825,
+      "files": 6,
+      "path": "/home/shivank_g/projects/pratham/entity_group/HackLabs/artifacts/models/sapbert_v2/best_SNOMED"
+    },
+    "Alias and mention-memory arrays": {
+      "bytes": 1959168364,
+      "files": 8,
+      "note": "Selected vector/row arrays only; excludes lexical objects, terminology tables and temporary query/score caches"
+    },
+    "Epoch-2 adapter": {
+      "bytes": 97811985,
+      "files": 12,
+      "path": "/home/shivank_g/projects/pratham/entity_group/HackLabs/artifacts/models/revised_epoch2_20261018/reranker_lora/best"
+    },
+    "F11 decisions": {
+      "bytes": 210179,
+      "files": 1,
+      "path": "/home/shivank_g/projects/pratham/entity_group/HackLabs/artifacts/models/revised_epoch2_20261018/decision/F11.joblib"
+    },
+    "Original SapBERT": {
+      "bytes": 438243733,
+      "files": 6,
+      "path": "/home/shivank_g/projects/pratham/entity_group/HackLabs/artifacts/hf_cache/hub/models--cambridgeltl--SapBERT-from-PubMedBERT-fulltext/snapshots/090663c3ae57bf35ffe4d0d468a2a88d03051a4d"
+    },
+    "Qwen base": {
+      "bytes": 1207484795,
+      "files": 7,
+      "path": "/home/shivank_g/projects/pratham/entity_group/HackLabs/artifacts/hf_cache/hub/models--Qwen--Qwen3-Reranker-0.6B/snapshots/e61197ed45024b0ed8a2d74b80b4d909f1255473"
+    }
+  },
+  "earlier_measurement_reference": {
+    "includes_validation": false,
+    "median_ms": 1345.6819669809192,
+    "p95_ms": 1757.2160298295778
+  },
+  "footprint": {
+    "allocated_device_uuid": "GPU-c8af218a-6cb5-bb9c-a4ac-d75bb4fec7dc",
+    "peak_device_memory_mib": 40475,
+    "peak_process_tree_rss_bytes": 15585484800,
+    "scope": "One-second observed peaks during model/index initialization and component benchmark; GPU includes serving reservation; RSS sum may double-count shared pages",
+    "successful_device_samples": 130,
+    "telemetry_samples": 130
+  },
+  "measurement": {
+    "additional_reference_check_inputs": 2,
+    "architecture": "sm86",
+    "both_systems_per_input": true,
+    "decision_sha256": "8f1a7adbb4dff1bd2578f6a94f141ed37e0d37348727e9a40b71a4a1907df256",
+    "empirical_serial_terms_per_second": 0.6545239766205401,
+    "epoch": 2,
+    "exact_instrumented_reference_match": true,
+    "exclusive_components": [
+      "preprocessing_and_type_ms",
+      "sapbert_encoding_ms",
+      "lexical_scoring_ms",
+      "dense_search_ms",
+      "memory_scoring_and_query_overhead_ms",
+      "candidate_fusion_expansion_ms",
+      "reranker_ms",
+      "decision_ms",
+      "validation_output_ms"
+    ],
+    "flow": "F11",
+    "gpu": "NVIDIA RTX A6000",
+    "maximum_accounting_error_ms": 0.0,
+    "n": 50,
+    "query_cache_disabled": true,
+    "query_memory_remainder_definition": "Inclusive add_queries minus encoders, character/BM25 and dense search; includes mention-memory matmul/transfers, score-row appends, masks and query bookkeeping",
+    "raw_timings_sha256": "820c96372901214817f2c9769a96d66fd5ebf91d48487a5e07b49dda2f44f511",
+    "reranker_identity": "lora_vllm_sm86_f87302a690fec919",
+    "retriever_init_seconds": 50.52691649401095,
+    "scope": "Warm single-input sequential F11 requests, both systems; train-only eval assets, input subconcept omitted; includes output assembly/validation, excludes disk export and external/UI transport",
+    "score_cache_disabled": true,
+    "seed": 13,
+    "slurm_job_id": "2746",
+    "source_sha256": {
+      "scripts/measure_component_latency.py": "0ef316834788c1b0c3c65147a161cb6b16f9009a819f1407ba5133f268ed9b72",
+      "termmap/decision.py": "1ac89010aebce4aff94f8519f2ee8b2dbf41e57ec0377001503eb633b6286e98",
+      "termmap/judging_runtime.py": "0f45b37611fcdf5f88ab25a1d8be996f67ed12bc0d1ada0d5b3eab1a31c4af50",
+      "termmap/latency_spans.py": "c78713b167008b9c76f691b751121ff5084d5e6e8edeb841ad509c89477e8a8b",
+      "termmap/online.py": "2dc68433d294de9d271a55613ab4db1d0d54f1271047e6ebc9acbd6c494d0478",
+      "termmap/prompts.py": "2f77b5688be89de368fc057793ceec7e7cf3f1cc517384b66c5ba6d7b22f1af2",
+      "termmap/rerank.py": "57e1478e9ea62941afdbf2afd18f68d724e0a022c7ec4f54f02115c6f9fec6eb"
+    },
+    "stages": {
+      "bm25_scoring_ms": {
+        "mean_ms": 96.86774322530255,
+        "median_ms": 101.45564196864143,
+        "p95_ms": 115.86550081265159
+      },
+      "candidate_fusion_expansion_ms": {
+        "mean_ms": 72.91905569843948,
+        "median_ms": 27.988727437332273,
+        "p95_ms": 477.98947957926373
+      },
+      "character_scoring_ms": {
+        "mean_ms": 766.0591863607988,
+        "median_ms": 845.844270021189,
+        "p95_ms": 896.239602053538
+      },
+      "decision_ms": {
+        "mean_ms": 19.203474821988493,
+        "median_ms": 18.145966983865947,
+        "p95_ms": 30.121216137195002
+      },
+      "dense_icd_ms": {
+        "mean_ms": 6.687501308042556,
+        "median_ms": 6.660013517830521,
+        "p95_ms": 9.795564593514428
+      },
+      "dense_search_ms": {
+        "mean_ms": 24.770680211950094,
+        "median_ms": 25.17847390845418,
+        "p95_ms": 29.26219801302068
+      },
+      "dense_snomed_ms": {
+        "mean_ms": 18.083178903907537,
+        "median_ms": 18.29747000010684,
+        "p95_ms": 21.69875386171043
+      },
+      "encode_icd_ms": {
+        "mean_ms": 17.86703407531604,
+        "median_ms": 19.175030465703458,
+        "p95_ms": 21.16208845982328
+      },
+      "encode_original_ms": {
+        "mean_ms": 20.271366785746068,
+        "median_ms": 20.60329297091812,
+        "p95_ms": 22.098651685519144
+      },
+      "encode_snomed_ms": {
+        "mean_ms": 17.45316214626655,
+        "median_ms": 19.03441542526707,
+        "p95_ms": 19.59395481972024
+      },
+      "legacy_total_excluding_validation_ms": {
+        "mean_ms": 1526.4421184384264,
+        "median_ms": 1565.724094514735,
+        "p95_ms": 1963.8250177435102
+      },
+      "lexical_scoring_ms": {
+        "mean_ms": 862.9269295861013,
+        "median_ms": 949.1878516273573,
+        "p95_ms": 1009.1628637921531
+      },
+      "memory_scoring_and_query_overhead_ms": {
+        "mean_ms": 10.68592849187553,
+        "median_ms": 10.81139437155798,
+        "p95_ms": 11.625538428779691
+      },
+      "preparation_total_ms": {
+        "mean_ms": 963.9802715927362,
+        "median_ms": 1054.4757050229236,
+        "p95_ms": 1118.1128890893888
+      },
+      "preprocessing_and_type_ms": {
+        "mean_ms": 10.005170295480639,
+        "median_ms": 10.014482424594462,
+        "p95_ms": 12.239201535703613
+      },
+      "reranker_ms": {
+        "mean_ms": 470.3393163252622,
+        "median_ms": 461.1212184536271,
+        "p95_ms": 579.253228555899
+      },
+      "sapbert_encoding_ms": {
+        "mean_ms": 55.59156300732866,
+        "median_ms": 59.170052933041006,
+        "p95_ms": 61.39252461143769
+      },
+      "total_ms": {
+        "mean_ms": 1527.8279111534357,
+        "median_ms": 1567.0702470233664,
+        "p95_ms": 1965.134609391679
+      },
+      "validation_output_ms": {
+        "mean_ms": 1.385792715009302,
+        "median_ms": 1.4518225216306746,
+        "p95_ms": 1.6665953793562949
+      }
+    },
+    "token_input_cache_disabled": true,
+    "units": "ms",
+    "wall_time_seconds": 76.39139555767179,
+    "warmup_public_inputs": 3
+  },
+  "source_sha256": {
+    "component_metrics.json": "999854b4f934e482a1833bf1e354b0a54c047dadda84d65867afc863b9d8224e",
+    "component_per_input_timings.parquet": "820c96372901214817f2c9769a96d66fd5ebf91d48487a5e07b49dda2f44f511",
+    "footprint.json": "95fefb53a4ef441123b9f1a50867dd9cb779e05efc5b6795ea1ed23c3035bbb1"
+  },
+  "startup": {
+    "definition": "Service process launch to healthy model/adapter endpoint; excludes Python launcher startup",
+    "seconds": 25.027335355989635
+  }
+}

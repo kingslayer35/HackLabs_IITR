@@ -1,0 +1,240 @@
+{
+  "verified_utc": "2026-10-18T13:05:57.619886+00:00",
+  "credential_source": "Explicit hidden prompt; credential not recorded",
+  "datasets_uploaded": false,
+  "models": [
+    {
+      "repo_id": "yobro4619/termmap-sapbert-icd",
+      "url": "https://huggingface.co/yobro4619/termmap-sapbert-icd",
+      "revision": "f764dde74978f3a12e0e26334bf2649a3eb02abc",
+      "private": false,
+      "source": "sapbert_v2/best_ICD",
+      "verified_files": [
+        {
+          "file": "README.md",
+          "bytes": 338,
+          "sha256": "288506653b669def5efa32aac29ca757d4e2bb0de4e9d8ed2f95d134580c320b"
+        },
+        {
+          "file": "config.json",
+          "bytes": 612,
+          "sha256": "4e21e22f70155526678e30c9b4eb537e1b746aa68b096fb5f5e7c63b8da24680"
+        },
+        {
+          "file": "model.safetensors",
+          "bytes": 437951328,
+          "sha256": "dc9d19cf07d44ea9bc4f85f2c547e1b333856e8ee969eb4d92102d19f327ffc3"
+        },
+        {
+          "file": "special_tokens_map.json",
+          "bytes": 125,
+          "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+        },
+        {
+          "file": "tokenizer.json",
+          "bytes": 706287,
+          "sha256": "b4990268f9747fbd2b5527e924d983c660a8191c3219857779bffd8342f178f5"
+        },
+        {
+          "file": "tokenizer_config.json",
+          "bytes": 1323,
+          "sha256": "745c6f27423562a1ad20edd7cded58f089da39b0ebf186caa529e05e980a6f7a"
+        },
+        {
+          "file": "vocab.txt",
+          "bytes": 226150,
+          "sha256": "79489a52be45e6fa033521e8ce8e4f62aedc0a742ee2aa6fc04667e5b0b1454d"
+        }
+      ],
+      "gated": false,
+      "anonymous_access_verified": true,
+      "anonymous_weight_access_verified": true,
+      "visibility_verified_utc": "2026-10-18T13:58:00.001533+00:00"
+    },
+    {
+      "repo_id": "yobro4619/termmap-sapbert-snomed",
+      "url": "https://huggingface.co/yobro4619/termmap-sapbert-snomed",
+      "revision": "904f32ec87779f29de4502a8799c9c4d42cb2175",
+      "private": false,
+      "source": "sapbert_v2/best_SNOMED",
+      "verified_files": [
+        {
+          "file": "README.md",
+          "bytes": 341,
+          "sha256": "e09bc0a7e015c97f50edc227ff61bb1a0b3d931702becc2f8ad3d4b0449e628e"
+        },
+        {
+          "file": "config.json",
+          "bytes": 612,
+          "sha256": "4e21e22f70155526678e30c9b4eb537e1b746aa68b096fb5f5e7c63b8da24680"
+        },
+        {
+          "file": "model.safetensors",
+          "bytes": 437951328,
+          "sha256": "2056062c8480b4e4bb3d5a0ac0064704a37a955d500c7ac289cedf8412601080"
+        },
+        {
+          "file": "special_tokens_map.json",
+          "bytes": 125,
+          "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+        },
+        {
+          "file": "tokenizer.json",
+          "bytes": 706287,
+          "sha256": "b4990268f9747fbd2b5527e924d983c660a8191c3219857779bffd8342f178f5"
+        },
+        {
+          "file": "tokenizer_config.json",
+          "bytes": 1323,
+          "sha256": "745c6f27423562a1ad20edd7cded58f089da39b0ebf186caa529e05e980a6f7a"
+        },
+        {
+          "file": "vocab.txt",
+          "bytes": 226150,
+          "sha256": "79489a52be45e6fa033521e8ce8e4f62aedc0a742ee2aa6fc04667e5b0b1454d"
+        }
+      ],
+      "gated": false,
+      "anonymous_access_verified": true,
+      "anonymous_weight_access_verified": true,
+      "visibility_verified_utc": "2026-10-18T13:58:01.444389+00:00"
+    },
+    {
+      "repo_id": "yobro4619/termmap-qwen-lora-epoch1",
+      "url": "https://huggingface.co/yobro4619/termmap-qwen-lora-epoch1",
+      "revision": "9536b9228931618616ae10e51e9008aa13566370",
+      "private": false,
+      "source": "reranker_lora/epoch_1",
+      "verified_files": [
+        {
+          "file": "README.md",
+          "bytes": 297,
+          "sha256": "275cccbd104d1c7d65f9144bd3f9e6dd0b7d17d18e8ce6257a9e0c71e35d3feb"
+        },
+        {
+          "file": "adapter_config.json",
+          "bytes": 937,
+          "sha256": "c7d4390600401c17287a3284f551b2037bb876e5871a2a3ab95d1b77c9fdc232"
+        },
+        {
+          "file": "adapter_model.safetensors",
+          "bytes": 40422168,
+          "sha256": "693820a67f595615f05e97525df4a094f6e1a2620d6a33109fdb02afde3ad880"
+        },
+        {
+          "file": "added_tokens.json",
+          "bytes": 707,
+          "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+        },
+        {
+          "file": "chat_template.jinja",
+          "bytes": 4116,
+          "sha256": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5"
+        },
+        {
+          "file": "merges.txt",
+          "bytes": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+        },
+        {
+          "file": "special_tokens_map.json",
+          "bytes": 613,
+          "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+        },
+        {
+          "file": "tokenizer.json",
+          "bytes": 11422752,
+          "sha256": "276ed25fcb6ee8b7e7471401215547154b76cba945be003746e1599a858b2fa0"
+        },
+        {
+          "file": "tokenizer_config.json",
+          "bytes": 5430,
+          "sha256": "ffe7b045351d007df591529681cad1b162859afaa83abc082da65c7e8eb994da"
+        },
+        {
+          "file": "training.json",
+          "bytes": 82,
+          "sha256": "5dcb98274ac090133e1474b6ca8836167c90be0ad99c2ed81c2a7fce49d9e220"
+        },
+        {
+          "file": "vocab.json",
+          "bytes": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+        }
+      ],
+      "gated": false,
+      "anonymous_access_verified": true,
+      "anonymous_weight_access_verified": true,
+      "visibility_verified_utc": "2026-10-18T13:58:02.370544+00:00"
+    },
+    {
+      "repo_id": "yobro4619/termmap-qwen-lora-epoch2",
+      "url": "https://huggingface.co/yobro4619/termmap-qwen-lora-epoch2",
+      "revision": "3380febda57e6f3f4db5c426a7211bccaed642e5",
+      "private": false,
+      "source": "reranker_lora/epoch_2",
+      "verified_files": [
+        {
+          "file": "README.md",
+          "bytes": 297,
+          "sha256": "77c70a48b5240806e55a14eda6b230f813503d750d935ca0d3844fea2bd021fc"
+        },
+        {
+          "file": "adapter_config.json",
+          "bytes": 937,
+          "sha256": "c7d4390600401c17287a3284f551b2037bb876e5871a2a3ab95d1b77c9fdc232"
+        },
+        {
+          "file": "adapter_model.safetensors",
+          "bytes": 40422168,
+          "sha256": "c92175a6aa9af5d30700067a7fb630b594ba3a27e449db3f45fc7f45bfe97410"
+        },
+        {
+          "file": "added_tokens.json",
+          "bytes": 707,
+          "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+        },
+        {
+          "file": "chat_template.jinja",
+          "bytes": 4116,
+          "sha256": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5"
+        },
+        {
+          "file": "merges.txt",
+          "bytes": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+        },
+        {
+          "file": "special_tokens_map.json",
+          "bytes": 613,
+          "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+        },
+        {
+          "file": "tokenizer.json",
+          "bytes": 11422752,
+          "sha256": "276ed25fcb6ee8b7e7471401215547154b76cba945be003746e1599a858b2fa0"
+        },
+        {
+          "file": "tokenizer_config.json",
+          "bytes": 5430,
+          "sha256": "ffe7b045351d007df591529681cad1b162859afaa83abc082da65c7e8eb994da"
+        },
+        {
+          "file": "training.json",
+          "bytes": 83,
+          "sha256": "92afdf09f85d907e5febab5aba2bcac2b959be92a4a6b0519ba8e8603e8683d4"
+        },
+        {
+          "file": "vocab.json",
+          "bytes": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+        }
+      ],
+      "gated": false,
+      "anonymous_access_verified": true,
+      "anonymous_weight_access_verified": true,
+      "visibility_verified_utc": "2026-10-18T13:58:03.262683+00:00"
+    }
+  ],
+  "visibility": "public models; clinical datasets excluded"
+}

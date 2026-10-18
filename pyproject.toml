@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools==84.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "termmap-iitr"
+version = "0.1.0"
+requires-python = ">=3.11,<3.12"
+description = "Clinical term mapping to ICD-10-CM and SNOMED CT"
+
+[tool.setuptools.packages.find]
+include = ["termmap*", "scripts*", "demo*"]
+exclude = ["demo.tests*", "agentic_solution*"]
+
+[tool.setuptools.package-data]
+demo = ["static/*.html", "static/*.css", "static/*.js", "static/*.svg", "sample.csv"]

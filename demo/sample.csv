@@ -1,0 +1,5 @@
+chunk_id,clinical_entity,chunk_text,subconcept
+public-1,MS,Neurology follow-up: MS with demyelinating lesions.,DiagnosisCode
+public-2,MS,Cardiology assessment: MS with a mitral valve gradient.,DiagnosisCode
+public-3,chronickidney disease stag 3,Assessment: chronic kidney disease stage 3.,DiagnosisCode
+public-4,right knee pain,Assessment: right knee pain without trauma.,DiagnosisCode

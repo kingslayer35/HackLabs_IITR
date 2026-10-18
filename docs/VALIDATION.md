@@ -1,0 +1,21 @@
+# Submission-copy validation
+
+- 152 pipeline/demo CPU tests pass, including private dictionary/tree counts, protected-token/context/abbreviation regressions, grouped evaluation/export safeguards, asymmetric encoder roles, relocated-checkpoint loading, the train-only deployment profile/release-drift checks and model-upload account/integrity safeguards.
+- Internal imports resolve after component packaging. Documentation links resolve. Production code/config contains no research-machine absolute path.
+- Asset copies verify checkpoint bytes against their originals; the bundle includes both Qwen epochs and selected epoch-2 weights, with the full original bases. Portable metadata paths do not change tensor bytes.
+- Training exports verify string-code preservation, no train/DEV/probe row/group overlap, all 10 sampled SapBERT epochs, and both complete 16-candidate Qwen quiz epochs. They verify recorded example/quiz counts; Qwen reconstruction uses the immutable training-runtime snapshot. Reconstructed material is labelled as such.
+- The private ZIP contains 226 assets (2,506,795,652 bytes). Its central directory, per-file hashes and CRC integrity are checked, with no duplicate archive entries. Raw labelled CSV, sealed TEST, optimizer-resume blobs, logs and score caches are excluded.
+- Code/artifact preparation launches no GPU jobs, retrains no model, opens no sealed partition and changes no source-repo files.
+- All four DEV/probe/TEST flows are imported with twelve passing validators. Prediction bytes match their validator hashes; published final aggregates match the saved metrics; DEV metric and decision files match the epoch-2 freeze. The 664-row CSV and aggregate JSON are byte-identical copies, and all Markdown metric-table lines are preserved exactly.
+- The portable release verifies 202 code/artifact hashes and twelve validated outputs. All four imported decision-model dictionaries and the original train-fitted type classifier load successfully in the curated package. Relative confirmed encoder paths resolve correctly after moving the checkout. No inference/model settings or trained tensors were changed.
+- Four trained model repositories under the explicitly confirmed `yobro4619` account are now public and ungated, at the owner's explicit request. Their complete inventories and SHA256/Git-blob hashes still match the verified model-only uploads; anonymous model metadata and weight-file access are verified. Exact revisions and visibility checks are recorded in [MODEL_UPLOADS.json](MODEL_UPLOADS.json). No model contents, training datasets, clinical records, caches or credentials were uploaded during the visibility change. Account checks and six tests protect the private initial-upload tool, which refuses existing public repositories.
+
+Not yet accepted: deployment on an allocated GPU after rebuilding this checkout's disposable indexes. The final decision models and saved evaluation results are imported; CPU packaging and release checks do not replace a complete GPU prediction/validation acceptance test.
+
+## Demo and independent-agent checks
+
+The repository demo passed its ten API/store tests (included in the 152 above), nine browser acceptance checks, upload/results accessibility checks, keyboard interaction, 390px reflow and real four-row F11 inference with a validated CSV download. Browser testing reused an already loaded worker and verified existing indexes; it does not establish fresh-index deployment acceptance or a new accuracy evaluation. Known model mistakes remain visible.
+
+The independent agent passed 101 tests in its separate environment with the private frozen artifacts restored. Those artifacts are excluded from Git, so a source-only checkout cannot run its data-dependent checks without restoring them. Its development-sample results remain separate from the team's DEV/TEST metrics.
+
+The distributable Python wheel includes the demo modules, static frontend and synthetic sample, and excludes independent research, private payloads and demo tests. A read-only commit audit is available as `python3 tools/check_commit_safety.py`; it checks tracked and eligible files for private/generated payloads, oversized files and recognizable credential formats. It does not stage files or replace manual review.

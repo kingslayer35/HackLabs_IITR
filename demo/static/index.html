@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>TermMap · Clinical term mapping</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="TermMap home"><img src="/favicon.svg" width="32" height="32" alt=""><span>TermMap<span class="brand-note">Clinical terminology</span></span></a>
+    <span class="local-label"><span class="status-dot"></span>Local inference</span>
+  </header>
+  <main>
+    <div class="heading-row">
+      <div><p class="eyebrow">Mapping workspace</p><h1>Clinical terms, connected.</h1><p class="intro">Upload extracted terms. Get ICD-10-CM and SNOMED CT mappings.</p></div>
+      <div class="worker-label" id="worker-status" role="status">Connecting to inference…</div>
+    </div>
+    <section class="pipeline" aria-label="Inference pipeline">
+      <div class="pipeline-title"><span class="pipeline-mark">F11</span><span>Adapted retrieval + contextual reranking</span></div>
+      <ol id="pipeline-stages">
+        <li data-stage="preparing"><span class="step-dot"></span>Prepare</li>
+        <li data-stage="retrieving"><span class="step-dot"></span>Retrieve</li>
+        <li data-stage="reranking"><span class="step-dot"></span>Rerank</li>
+        <li data-stage="deciding"><span class="step-dot"></span>Decide</li>
+        <li data-stage="validating"><span class="step-dot"></span>Validate</li>
+      </ol>
+    </section>
+    <div class="workspace">
+      <section class="panel input-panel" aria-labelledby="input-title">
+        <div class="panel-heading"><span class="section-number">01</span><h2 id="input-title">Your input</h2></div>
+        <form id="upload-form" novalidate>
+          <div class="drop-zone" id="drop-zone">
+            <svg class="upload-icon" width="34" height="34" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 21V5m0 0-6 6m6-6 6 6M6 21v6h20v-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <label for="csv-file" class="file-label">Choose a CSV file</label>
+            <p>or drop it here</p>
+            <input id="csv-file" class="sr-only" name="file" type="file" accept=".csv,text/csv" aria-describedby="file-help error-message">
+            <span class="file-limits" id="file-help">UTF-8 CSV · Up to 100 rows · 2 MB</span>
+          </div>
+          <div class="file-summary" id="file-summary" hidden><div><strong id="file-name"></strong><span id="file-info"></span></div><button type="button" class="text-button" id="remove-file" disabled>Change file</button></div>
+          <div class="error-message" id="error-message" role="alert" tabindex="-1" hidden></div>
+          <div class="upload-actions"><button type="submit" class="button button-primary" id="run-button" disabled><span id="run-label">Run mapping</span><span aria-hidden="true">↗</span></button><button type="button" class="button button-secondary" id="cancel-button" disabled hidden>Cancel run</button></div>
+          <p class="run-hint" id="run-hint">Choose a file to get started.</p>
+        </form>
+        <div class="sample-row"><span>Trying it out?</span><button type="button" class="text-button" id="sample-button" disabled>Use sample CSV <span aria-hidden="true">→</span></button></div>
+        <details class="format-help"><summary>CSV format</summary><p>Required: <code>clinical_entity</code> (or <code>entity</code>). Optional: <code>chunk_id</code>, <code>chunk_text</code>, <code>subconcept</code>.</p><p>Each row is an extracted clinical mention. Use <code>chunk_text</code> for its surrounding chart context.</p><a href="/api/sample.csv" download="termmap_sample.csv">Download an example</a></details>
+        <div id="input-preview" class="input-preview" hidden><h3>Input preview</h3><div id="preview-rows"></div></div>
+      </section>
+      <section class="panel results-panel" aria-labelledby="results-title" aria-busy="false" id="results-panel">
+        <div class="panel-heading results-heading"><div class="heading-group"><span class="section-number">02</span><h2 id="results-title">Mapped results</h2><span class="count" id="result-count" hidden></span></div><a class="button button-secondary download" id="download-link" hidden>Download CSV <span aria-hidden="true">↓</span></a></div>
+        <div class="run-status" id="run-status" role="status" aria-live="polite" hidden><span class="spinner" id="run-spinner" aria-hidden="true"></span><span id="run-status-text"></span></div>
+        <progress id="run-progress" value="0" max="100" aria-label="Clinical terms processed" hidden></progress>
+        <div class="empty-state" id="empty-state"><div class="mapping-illustration" aria-hidden="true"><span class="source-line"></span><span class="branch"></span><div><span>ICD-10-CM</span><span>SNOMED CT</span></div></div><h3>A clear view of every mapping.</h3><p>Your codes and descriptions will appear here.<br>Open a result to inspect its context and alternatives.</p></div>
+        <div class="table-scroll" id="results-table-wrap" hidden><table><caption class="sr-only">Predicted clinical terminology mappings</caption><thead><tr><th scope="col">Clinical term</th><th scope="col">ICD-10-CM</th><th scope="col">SNOMED CT</th><th scope="col">Review</th></tr></thead><tbody id="results-body"></tbody></table></div>
+        <div class="pagination" id="pagination" hidden><span id="page-range"></span><div><button type="button" class="icon-button" id="previous-page" disabled aria-label="Previous results page">←</button><button type="button" class="icon-button" id="next-page" disabled aria-label="Next results page">→</button></div></div>
+        <div class="results-footnote" id="results-footnote" hidden><span class="validation-mark" aria-hidden="true">✓</span><span id="validation-text"></span></div>
+      </section>
+    </div>
+    <footer><span>TermMap / HiLabs AIQuest</span><span>Model predictions for review. Codes are validated against the supplied dictionaries.</span></footer>
+  </main>
+  <div id="announcer" class="sr-only" role="status" aria-live="polite"></div>
+</body>
+</html>

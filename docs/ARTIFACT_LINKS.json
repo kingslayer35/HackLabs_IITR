@@ -1,0 +1,9 @@
+{
+  "private_drive_bundle_url": null,
+  "private_drive_bundle_sha256": "ea3d2590050a4fdf0fdb72280d0e42700ed0920f9411b72c83570062f2bea420",
+  "huggingface_sapbert_icd": "https://huggingface.co/yobro4619/termmap-sapbert-icd",
+  "huggingface_sapbert_snomed": "https://huggingface.co/yobro4619/termmap-sapbert-snomed",
+  "huggingface_qwen_lora_epoch1": "https://huggingface.co/yobro4619/termmap-qwen-lora-epoch1",
+  "huggingface_qwen_lora_epoch2": "https://huggingface.co/yobro4619/termmap-qwen-lora-epoch2",
+  "demo_video_url": null
+}
