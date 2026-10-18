@@ -110,7 +110,7 @@ We also built and evaluated a separate approach: a tool-using LLM agent that wor
 | SapBERT search for ICD | 69.2 | 69.2 | 53.0 |
 | **With fallback rescue when the turn budget runs out** | **70.6** | **71.4** | **53.6** |
 
-It reaches about 60% on unseen codes in both systems. The 500 inputs are reused development cases (diagnoses only), so these numbers are not directly comparable with the TEST results above. The agent needs several hosted LLM calls per input and is not deterministic. We therefore see it as a second opinion for low-confidence inputs, not a replacement. Details are in Appendix H of the report and in [agentic_solution/](agentic_solution/README.md).
+It reaches about 60% on unseen codes in both systems. The 500 inputs are reused development cases (diagnoses only), so these numbers are not directly comparable with the TEST results above. The agent needs several hosted LLM calls per input and is not deterministic. On its own it is therefore a second opinion, not a replacement. Next we plan to combine the two: for the hardest, low-confidence cases, an agentic loop will call our retrieval engine as a tool after reranking to re-check the final code and raise confidence in it. Details are in Appendix H of the report and in [agentic_solution/](agentic_solution/README.md).
 
 ## Repository layout
 
